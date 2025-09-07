@@ -80,7 +80,14 @@ function App() {
        
 <Skills/>
 <ToolsFancy/>
-       <Route path="/proyectos" element={<ProjectsCarousel />} />
+        {/* === PROYECTOS EN CARRUSEL === */}
+        <section id="proyectos" className="py-4">
+          <div className="container">
+            <h2 className="h3 fw-bold mb-3 text-center text-md-start">Proyectos</h2>
+            <ProjectsCarousel items={projects} />
+          </div>
+        </section>
+
             </main>
 
       <Footer />

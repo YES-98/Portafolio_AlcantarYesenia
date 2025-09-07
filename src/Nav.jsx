@@ -11,7 +11,7 @@ const Navbar = () => {
             <a className="flex-sm-fill text-sm-center nav-link" href="#habilidades">Habilidades</a>
           </li>
           <li className="nav-item d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2 mx-2">
-            <a className="nav-link" href="./proyectos">Proyectos</a>
+            <a className="nav-link" href="#proyectos">Proyectos</a>
           </li>
           <li className="nav-item d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2 mx-2">
             <a className="nav-link" href="#herramientas">Herramientas</a>
