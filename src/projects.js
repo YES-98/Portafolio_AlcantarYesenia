@@ -19,6 +19,6 @@ export const projects = [
     title: "UTOM ll",
     img: "https://picsum.photos/seed/utom/1200/350",
     description: "Portafolio con secciones y modo oscuro.",
-    link: "https://github.com/YES-98/utom-portfolio"
+    link: "https://game-center-murex.vercel.app"
   }
 ];

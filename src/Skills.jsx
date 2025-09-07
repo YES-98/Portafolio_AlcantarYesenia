@@ -8,7 +8,6 @@ const Skills = () => {
   const skills = [
     { name: "React", value: 85, color: "#61DBFB" },
     { name: "Node.js", value: 70, color: "#3C873A" },
-    { name: "Python", value: 35, color: "#FFD43B" },
     { name: "SQL", value: 65, color: "#00758F" },
     { name: "HTML", value: 65, color: "#001a8fff" },
     { name: "CSS", value: 65, color: "#00758F" },

@@ -5,6 +5,7 @@ import Skills from './Skills';
 import ProjectsCarousel from './ProjectsCarousel';
 import { projects } from './projects';
 import ToolsFancy from './ToolsFancy';
+import ProjectsFigma from './ProjectsFigma';
 
 import lala from './assets/photo.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -87,6 +88,7 @@ function App() {
             <ProjectsCarousel items={projects} />
           </div>
         </section>
+        <ProjectsFigma/>
 
             </main>
 
