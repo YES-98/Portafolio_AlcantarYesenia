@@ -1,0 +1,42 @@
+.custom-navbar {
+  background: linear-gradient(-45deg, #0b0c2a, #28ac54, #36c5c5, #0f2027);
+  background-size: 400% 400%;
+  animation: spaceDrift 10s ease infinite;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes spaceDrift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 10% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+          .navbar-brand {
+            font-weight: bold;
+            background: linear-gradient(to right, #f8faf8, #e4e4e4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .custom-offcanvas {
+            background: linear-gradient(to right, #292929);
+            color: #fff;
+          }
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f6fcffad !important;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #041e3b !important;
+  transform: translateY(-2px);
+}
