@@ -1,7 +1,7 @@
 // src/App.jsx
 import Nav from './Nav';
 import Footer from './Footer';
-import Skills from './skills';
+import Skills from './Skills';
 import ProjectsCarousel from './ProjectsCarousel';
 import { projects } from './projects';
 import ToolsFancy from './ToolsFancy';
