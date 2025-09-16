@@ -1,4 +1,3 @@
-// src/ProjectsCarousel.jsx
 import { useId } from "react";
 
 export default function ProjectsCarousel({ items = [] }) {
@@ -22,16 +21,26 @@ export default function ProjectsCarousel({ items = [] }) {
               <h5 className="mb-1">{p.title}</h5>
               <p className="mb-2">{p.description}</p>
 
-              {p.link && (
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-sm bg-white text-dark border"
+              <div className="d-flex gap-2">
+                {p.link && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-sm bg-white text-dark border"
+                  >
+                    <i className="bi bi-github me-1"></i> Ver repositorio
+                  </a>
+                )}
+
+                {/* 🔹 Botón nuevo que redirige a la ruta definida */}
+                <button
+                  className="btn btn-sm btn-secondary"
+                  onClick={() => (window.location.href = p.route)}
                 >
-                  <i className="bi bi-github me-1"></i> Ver repositorio
-                </a>
-              )}
+                  Más información
+                </button>
+              </div>
             </div>
           </div>
         ))}
@@ -43,10 +52,7 @@ export default function ProjectsCarousel({ items = [] }) {
         data-bs-target={`#${carouselId}`}
         data-bs-slide="prev"
       >
-        <span
-          className="carousel-control-prev-icon"
-          aria-hidden="true"
-        ></span>
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Anterior</span>
       </button>
 
@@ -56,10 +62,7 @@ export default function ProjectsCarousel({ items = [] }) {
         data-bs-target={`#${carouselId}`}
         data-bs-slide="next"
       >
-        <span
-          className="carousel-control-next-icon"
-          aria-hidden="true"
-        ></span>
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Siguiente</span>
       </button>
 

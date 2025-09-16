@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { projects } from "../data/projects";
+import { projects } from "./data/projects"; // 👈 corregida la ruta
 
 const Projects = () => {
   const [selected, setSelected] = useState(null);
@@ -15,13 +15,13 @@ const Projects = () => {
           <h2>{project.title}</h2>
           <img src={project.img} alt={project.title} />
           <p>{project.description}</p>
+
           <button onClick={() => handleClick(project.id)}>
             {selected === project.id ? "Cerrar" : "Más info"}
           </button>
 
           {selected === project.id && (
             <div className="project-details">
-              {/* 🔹 Aquí defines más información manualmente */}
               {project.id === 1 && (
                 <p>
                   <strong>Emonical:</strong> Chatbot gestor emocional con RA,
@@ -36,10 +36,10 @@ const Projects = () => {
               )}
               {project.id === 3 && (
                 <p>
-                  <strong>UTOM II:</strong> Portafolio institucional con modo
-                  oscuro y despliegue en Vercel.
+                  <strong>UTOM II:</strong> Portafolio institucional con modo oscuro.
                 </p>
               )}
+
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 Ver en GitHub/Demo
               </a>
