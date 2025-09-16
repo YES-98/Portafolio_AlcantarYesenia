@@ -11,12 +11,14 @@ const Footer = () => {
               <br />
               Escríbeme y te respondo con gusto.
             </p>
-            <a
-              href="mailto:tu.correo@ejemplo.com"
-              className="btn btn-outline-light w-100 w-sm-auto"
-            >
-              <i className="bi bi-envelope me-2"></i> Enviar correo
-            </a>
+          <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=yeseniaalcantarrdz@gmail.com&su=Hola%20Yesenia&body=Te%20escribo%20desde%20tu%20portafolio."
+  target="_blank"
+  class="btn btn-outline-light w-100 w-sm-auto"
+>
+  <i class="bi bi-envelope me-2"></i> Enviar correo
+</a>
+
           </div>
 
           {/* Columna derecha */}

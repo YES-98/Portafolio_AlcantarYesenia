@@ -67,3 +67,13 @@
   .tool-icon-wrap { width: 56px; height: 56px; }
   .tool-icon-wrap i { font-size: 1.4rem; }
 }
+.section-badge {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #007ACC;
+  background: rgba(0, 122, 204, 0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 0 auto 2rem;
+}

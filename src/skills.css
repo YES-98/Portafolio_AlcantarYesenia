@@ -1,5 +1,103 @@
+/* --- Tarjetas de herramientas / skills --- */
 .tool-card {
-  transition: transform .18s ease, box-shadow .18s ease;
-  border-radius: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 1.2rem;
+  background: #ffffff;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
-.tool-card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(0,0,0,.12); }
+
+.tool-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Círculo de progreso --- */
+.skill-circle {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.skill-logo {
+  position: absolute;
+  top: 38%; /* un poco más arriba que el centro */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.skill-percent {
+  position: absolute;
+  bottom: 18%; 
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+/* --- Texto de nombre debajo del círculo --- */
+.skill-name {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* --- Badges de habilidades personales --- */
+#soft-skills .badge {
+  font-size: 0.95rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+#soft-skills .badge:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+/* --- Tarjeta de habilidades personales --- */
+.personal-skill-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.personal-skill-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Icono */
+.personal-skill-card .icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+/* Título */
+.personal-skill-card h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Descripción */
+.personal-skill-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}

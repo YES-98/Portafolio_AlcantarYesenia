@@ -1,11 +1,6 @@
 // src/ProjectsCarousel.jsx
 import { useId } from "react";
 
-/**
- * Carrusel de proyectos (1 por slide).
- * Requiere que el bundle JS de Bootstrap esté importado en App.jsx:
- *   import 'bootstrap/dist/js/bootstrap.bundle.min.js';
- */
 export default function ProjectsCarousel({ items = [] }) {
   const carouselId = `projects-${useId().replace(/:/g, "")}`;
   if (!items.length) return null;
@@ -14,19 +9,27 @@ export default function ProjectsCarousel({ items = [] }) {
     <div id={carouselId} className="carousel slide carousel-fade">
       <div className="carousel-inner rounded-3 overflow-hidden">
         {items.map((p, i) => (
-          <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={p.id ?? i}>
-            <img src={p.img} className="d-block w-100 object-fit-cover" alt={p.title} />
+          <div
+            className={`carousel-item ${i === 0 ? "active" : ""}`}
+            key={p.id ?? i}
+          >
+            <img
+              src={p.img}
+              className="d-block w-100 object-fit-cover"
+              alt={p.title}
+            />
             <div className="carousel-caption d-none d-md-block text-start bg-dark bg-opacity-50 rounded-3 p-3">
               <h5 className="mb-1">{p.title}</h5>
               <p className="mb-2">{p.description}</p>
+
               {p.link && (
                 <a
                   href={p.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-sm btn-primary"
+                  className="btn btn-sm bg-white text-dark border"
                 >
-                  Ver repositorio
+                  <i className="bi bi-github me-1"></i> Ver repositorio
                 </a>
               )}
             </div>
@@ -40,7 +43,10 @@ export default function ProjectsCarousel({ items = [] }) {
         data-bs-target={`#${carouselId}`}
         data-bs-slide="prev"
       >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span
+          className="carousel-control-prev-icon"
+          aria-hidden="true"
+        ></span>
         <span className="visually-hidden">Anterior</span>
       </button>
 
@@ -50,7 +56,10 @@ export default function ProjectsCarousel({ items = [] }) {
         data-bs-target={`#${carouselId}`}
         data-bs-slide="next"
       >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span
+          className="carousel-control-next-icon"
+          aria-hidden="true"
+        ></span>
         <span className="visually-hidden">Siguiente</span>
       </button>
 

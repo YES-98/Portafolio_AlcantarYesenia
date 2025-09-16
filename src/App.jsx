@@ -1,11 +1,15 @@
 // src/App.jsx
+
 import Nav from './Nav';
 import Footer from './Footer';
 import Skills from './Skills';
 import ProjectsCarousel from './ProjectsCarousel';
 import { projects } from './projects';
 import ToolsFancy from './ToolsFancy';
-import ProjectsFigma from './ProjectsFigma';
+
+import FigmaGallery from './FigmaGallery';
+// ...
+import Emonical from "./page/Emonical";
 
 import lala from './assets/photo.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -46,9 +50,10 @@ function App() {
               <div className="col-12 col-md-8 text-center text-md-start">
                 <h1 className="h2 fw-bold mb-2">¡Hola! Soy Yesenia Alcantar</h1>
                 <p className="lead mb-2">
-                  Soy estudiante en la Universidad Tecnológica del Oriente de Michoacán. Me apasiona
-                  el desarrollo y el diseño de interfaces, además de la gestión de información y otras
-                  áreas de tecnologías.
+                  Soy Técnica uniersitaria en el área de Desarrollo de Software Multiplataforma y estudiante 
+                  en Ingeniería en Desarrollo y Gestión de Software en la UTOM en la Universidad Tecnológica 
+                  del Oriente de Michoacán. Me apasiona el desarrollo y el diseño de interfaces, 
+                  además de la gestión de información y otras áreas de tecnologías.
                   </p>
 
                 {/* Redes principales */}
@@ -80,6 +85,7 @@ function App() {
         </section>
        
 <Skills/>
+<Emonical />
 <ToolsFancy/>
         {/* === PROYECTOS EN CARRUSEL === */}
         <section id="proyectos" className="py-4">
@@ -88,11 +94,13 @@ function App() {
             <ProjectsCarousel items={projects} />
           </div>
         </section>
-        <ProjectsFigma/>
-
+<FigmaGallery />
             </main>
 
       <Footer />
+
+ 
+
     </>
   );
 }
