@@ -1,42 +1,87 @@
+/* ===== Barra de navegación personalizada ===== */
 .custom-navbar {
-  background: linear-gradient(-45deg, #0b0c2a, #28ac54, #36c5c5, #0f2027);
-  background-size: 400% 400%;
-  animation: spaceDrift 10s ease infinite;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+   background-size: 400% 400%;
+  animation: spaceDrift 15s ease infinite;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 12px 12px; /* Bordes redondeados en la parte inferior */
+  backdrop-filter: blur(10px); /* Fondo semi-transparente con blur */
+  transition: all 0.3s ease;
 }
 
+/* Animación del fondo de la navbar */
 @keyframes spaceDrift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 10% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-          .navbar-brand {
-            font-weight: bold;
-            background: linear-gradient(to right, #f8faf8, #e4e4e4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
+/* Logo o marca */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #f8faf8, #e4e4e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
 
-          .custom-offcanvas {
-            background: linear-gradient(to right, #292929);
-            color: #fff;
-          }
+.navbar-brand:hover {
+  transform: scale(1.05); /* Leve efecto de zoom al pasar el mouse */
+}
+
+/* Links de navegación */
 .nav-link {
   font-size: 1rem;
   font-weight: 500;
-  color: #f6fcffad !important;
-  margin: 0 10px;
-  transition: color 0.3s ease, transform 0.2s ease;
+  color: #f6fcffcc !important; /* Color semi-transparente */
+  margin: 0 12px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
+/* Hover en links */
 .nav-link:hover {
-  color: #041e3b !important;
-  transform: translateY(-2px);
+  color: #ffffff !important; /* Color brillante al hover */
+  transform: translateY(-4px); /* Efecto de subir */
+}
+
+/* Subrayado animado al pasar mouse */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #2a9d8f;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Offcanvas / menú lateral */
+.custom-offcanvas {
+  background: linear-gradient(to bottom, #292929, #1c1c1c);
+  color: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Para pantallas móviles, efectos de hover se mantienen */
+@media (max-width: 768px) {
+  .nav-link:hover {
+    transform: translateY(-3px);
+  }
 }

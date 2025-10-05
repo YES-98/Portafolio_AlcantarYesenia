@@ -1,79 +1,102 @@
-/* Sección con fondo vistoso (combina con tu tema verde→negro si quieres) */
+/* Sección con fondo moderno y colorido */
 .tools-section {
-  background:
-    radial-gradient(1200px 400px at 10% -10%, rgba(34,139,34,.25), transparent 60%),
-    radial-gradient(900px 300px at 90% 0%, rgba(139,92,246,.25), transparent 55%),
-    linear-gradient(180deg, #0b0f14 0%, #0a0d11 100%);
+  background: linear-gradient(135deg, #8298d8, #1cc88a);
   position: relative;
+  padding: 5rem 0;
+  border-radius: 1.5rem; /* Bordes redondeados */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
-/* Tarjeta “glass” con glow y tilt */
-.tool-card {
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-  border: 1px solid rgba(255,255,255,.08);
-  box-shadow:
-    0 1px 0 rgba(255,255,255,.08) inset,
-    0 10px 25px rgba(0,0,0,.35);
-  transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, filter .25s ease;
+/* Tarjetas con bordes limpios, sombra y hover */
+.tool-card-clear {
+  background-color: rgba(127, 250, 213, 0.61);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px); /* Efecto de vidrio difuso */
 }
 
-/* glow en hover usando var(--glow) desde inline style */
-.tool-card:hover {
-  transform: perspective(800px) rotateX(3deg) rotateY(-3deg) translateY(-6px);
-  box-shadow:
-    0 0 0 1px var(--glow),
-    0 12px 30px rgba(0,0,0,.45),
-    0 0 40px 4px color-mix(in srgb, var(--glow), transparent 60%);
-  border-color: color-mix(in srgb, var(--glow), white 70%);
-  filter: saturate(1.08);
+.tool-card-clear:hover {
+  transform: translateY(-10px) scale(1.05); /* Efecto de elevación y aumento */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Icono grande dentro de cápsula con borde sutil */
-.tool-icon-wrap {
-  width: 64px;
-  height: 64px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.12), rgba(255,255,255,.04));
-  box-shadow: 0 6px 16px rgba(0,0,0,.35) inset, 0 10px 24px rgba(0,0,0,.25);
+/* Icono grande dentro de cápsula con transición suave */
+.tool-icon-clear {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-.tool-icon-wrap i {
-  font-size: 1.6rem;
-  color: color-mix(in srgb, var(--glow), white 30%);
+.tool-icon-clear i {
+  font-size: 2.5rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
-/* Pequeño brillo animado en hover */
-.tool-card::after {
+.tool-icon-clear:hover {
+  transform: scale(1.2); /* Aumenta el tamaño del icono */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+ 
+}
+
+.tool-icon-clear:hover i {
+  color: #1cc88a; /* Cambio de color en hover */
+}
+
+/* Efecto de brillo animado en hover */
+.tool-card-clear::after {
   content: "";
   position: absolute;
-  inset: -2px;
-  border-radius: 1.25rem;
-  pointer-events: none;
-  background:
-    conic-gradient(from 180deg at 50% 50%,
-      transparent 0 20%,
-      color-mix(in srgb, var(--glow), transparent 70%) 25% 35%,
-      transparent 40% 100%);
+  inset: -3px;
+  border-radius: 1.5rem;
+  background: conic-gradient(from 180deg at 50% 50%, transparent 0%, #72d17a6e 50%, transparent 100%);
   opacity: 0;
-  transition: opacity .25s ease;
+  transition: opacity 0.3s ease;
   filter: blur(10px);
 }
-.tool-card:hover::after { opacity: .7; }
 
-/* Responsive toques */
-@media (max-width: 576px) {
-  .tool-icon-wrap { width: 56px; height: 56px; }
-  .tool-icon-wrap i { font-size: 1.4rem; }
+.tool-card-clear:hover::after {
+  opacity: 1; /* Muestra el brillo */
 }
-.section-badge {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #007ACC;
-  background: rgba(0, 122, 204, 0.1);
-  padding: 0.6rem 1.2rem;
-  border-radius: 12px;
-  display: inline-block;
-  margin: 0 auto 2rem;
+
+/* Estilo de texto en las tarjetas */
+.tool-card-clear h6 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.tool-card-clear p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive: ajuste en iconos en pantallas pequeñas */
+@media (max-width: 576px) {
+  .tool-icon-clear {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tool-icon-clear i {
+    font-size: 2rem;
+  }
+
+  .tool-card-clear {
+    padding: 1.5rem;
+  }
 }

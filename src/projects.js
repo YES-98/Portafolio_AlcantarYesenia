@@ -16,6 +16,7 @@ export const projects = [
     img: "https://picsum.photos/seed/cremeria/1200/350",
     description: "Landing con catálogo y carrito básico.",
     link: "https://github.com/YES-98/cremeria-flor",
+    route: "/cremeriaflor"
 
   },
   {

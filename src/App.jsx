@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+import "./tolls.css"; // Importamos los estilos
+
 import { Routes, Route } from "react-router-dom";
 import Nav from './Nav';
 import Footer from './Footer';
@@ -13,11 +16,37 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
 import './App.css';
+import CremeriaFlor from './page/Cremeriaflor';
 
 function App() {
+  // Estado para saber si la barra está visible
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    // Función para manejar el scroll
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // Si el scroll va hacia abajo, ocultamos la barra
+        setIsVisible(false);
+      } else {
+        // Si el scroll va hacia arriba, mostramos la barra
+        setIsVisible(true);
+      }
+
+      setLastScrollY(window.scrollY); // Actualizamos la última posición del scroll
+    };
+
+    // Agregar evento de scroll
+    window.addEventListener("scroll", handleScroll);
+
+    // Limpiar el evento al desmontar el componente
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
     <>
-      <Nav />
+      <Nav isVisible={isVisible} />
 
       <main>
         <Routes>
@@ -26,7 +55,7 @@ function App() {
             path="/"
             element={
               <>
-                <section id="sobre-mi" className="py-4 bg-light">
+                <section id="sobre-mi" className="py-4">
                   <div className="row align-items-center justify-content-center gy-3 gx-md-5">
                     <div className="col-10 col-sm-8 col-md-4 text-center">
                       <img
@@ -36,18 +65,21 @@ function App() {
                       />
                     </div>
                     <div className="col-12 col-md-8 text-center text-md-start">
-                      <h1 className="h2 fw-bold mb-2">¡Hola! Soy Yesenia Alcantar</h1>
-                      <p className="lead mb-2">
-                        Soy Técnica universitaria en el área de Desarrollo de Software Multiplataforma y estudiante 
-                        en Ingeniería en Desarrollo y Gestión de Software en la UTOM. 
-                        Me apasiona el desarrollo y el diseño de interfaces, además de la gestión 
+                      <h1 className="h2 fw-bold mb-2 text-white">¡Hola! Soy Yesenia Alcantar</h1>
+                      <p className="lead mb-2 text-white">
+                        Técnica universitaria en el Área de Desarrollo de Software Multiplataforma. Estudiante 
+                        en Ingeniería de Desarrollo y Gestión de Software en la Universidad Tecnológica del Oriente de Michoacán. 
+                        Apasionada en el desarrollo y el diseño de interfaces como diseñadora UX/UI Designer, además de la gestión 
                         de información y otras áreas de tecnologías.
                       </p>
                     </div>
                   </div>
                 </section>
 
+                {/* Sección de habilidades */}
                 <Skills />
+
+                {/* Sección de herramientas */}
                 <ToolsFancy />
 
                 <section id="proyectos" className="py-4">
@@ -57,6 +89,7 @@ function App() {
                   </div>
                 </section>
 
+                {/* Galería de Figma */}
                 <FigmaGallery />
               </>
             }
@@ -64,7 +97,10 @@ function App() {
 
           {/* Página de Emonical */}
           <Route path="/emonical" element={<Emonical />} />
+          <Route path="/CremeriaFlor" element={<CremeriaFlor />} />
+        
         </Routes>
+      
       </main>
 
       <Footer />

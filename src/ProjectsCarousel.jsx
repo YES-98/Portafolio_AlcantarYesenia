@@ -5,23 +5,31 @@ export default function ProjectsCarousel({ items = [] }) {
   if (!items.length) return null;
 
   return (
-    <div id={carouselId} className="carousel slide carousel-fade">
+    <div
+      id={carouselId}
+      className="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
       <div className="carousel-inner rounded-3 overflow-hidden">
         {items.map((p, i) => (
           <div
             className={`carousel-item ${i === 0 ? "active" : ""}`}
             key={p.id ?? i}
           >
+            {/* 🔹 Imagen responsiva */}
             <img
               src={p.img}
-              className="d-block w-100 object-fit-cover"
+              className="d-block w-100 img-fluid object-fit-cover"
+              style={{ maxHeight: "450px" }} // evita imágenes demasiado grandes
               alt={p.title}
             />
-            <div className="carousel-caption d-none d-md-block text-start bg-dark bg-opacity-50 rounded-3 p-3">
-              <h5 className="mb-1">{p.title}</h5>
-              <p className="mb-2">{p.description}</p>
 
-              <div className="d-flex gap-2">
+            {/* 🔹 Texto adaptado según tamaño de pantalla */}
+            <div className="carousel-caption text-start bg-dark bg-opacity-50 rounded-3 p-3">
+              <h5 className="mb-1 fs-5 fs-md-4">{p.title}</h5>
+              <p className="mb-2 d-none d-sm-block">{p.description}</p>
+
+              <div className="d-flex flex-wrap gap-2">
                 {p.link && (
                   <a
                     href={p.link}
@@ -46,6 +54,7 @@ export default function ProjectsCarousel({ items = [] }) {
         ))}
       </div>
 
+      {/* 🔹 Botones de control */}
       <button
         className="carousel-control-prev"
         type="button"
@@ -66,6 +75,7 @@ export default function ProjectsCarousel({ items = [] }) {
         <span className="visually-hidden">Siguiente</span>
       </button>
 
+      {/* 🔹 Indicadores */}
       <div className="carousel-indicators">
         {items.map((_, i) => (
           <button

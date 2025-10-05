@@ -27,7 +27,7 @@ export default function FigmaGallery({ projects = figmaProjects }) {
   const close = () => setActive(null);
 
   return (
-    <section id="figma-gallery" className="py-4 bg-light">
+    <section id="figma-gallery" className="py-4">
       <div className="container">
         <h2 className="h3 fw-bold mb-3 text-center text-md-start">Galería Figma</h2>
 

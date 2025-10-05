@@ -8,7 +8,7 @@ const Skills = () => {
   const skillsData = [
     { name: "React", value: 85, color: "#61DBFB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
     { name: "Node.js", value: 70, color: "#3C873A", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "SQL", value: 65, color: "#00758F", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+    { name: "SQL", value: 65, color: "#4a6f77ff", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
     { name: "HTML", value: 65, color: "#e34c26", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
     { name: "CSS", value: 65, color: "#264de4", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
     { name: "Bootstrap", value: 65, color: "#7952b3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
@@ -44,7 +44,7 @@ const Skills = () => {
   });
 
   return (
-    <section id="habilidades" ref={ref} className="py-5 bg-light text-dark">
+    <section id="habilidades" ref={ref} className="py-5 ">
       <div className="container">
         <h2 className="h3 fw-bold mb-4 text-center">Habilidades</h2>
 

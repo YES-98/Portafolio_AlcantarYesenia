@@ -1,7 +1,6 @@
-// src/Nav.jsx
 "use client";
 import { useEffect, useRef, useState } from "react";
-import "./Nav.css";
+import "./Nav.css"; // Asegúrate de que los estilos estén correctamente importados
 
 const Navbar = () => {
   const collapseRef = useRef(null);
@@ -126,7 +125,7 @@ const Navbar = () => {
     >
       <div className="container">
         {/* Brand */}
-        <a className="navbar-brand fw-semibold" href="#sobre-mi">
+        <a className="navbar-brand fw-semibold" href="/">
           Portafolio
         </a>
 
