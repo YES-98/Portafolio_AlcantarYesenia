@@ -1,4 +1,34 @@
-import { useId } from "react";
+import React, { useId } from "react";
+
+// Fallback para que no se rompa el slide si la imagen falla
+function ImgSafe({ src, alt }) {
+  const [ok, setOk] = React.useState(true);
+  return ok ? (
+    <img
+      src={src}
+      className="d-block w-100 img-fluid"
+      style={{ maxHeight: 450, objectFit: "cover" }}
+      alt={alt}
+      loading="lazy"
+      onError={() => setOk(false)}
+    />
+  ) : (
+    <div
+      className="d-block w-100"
+      style={{
+        maxHeight: 450,
+        aspectRatio: "16/9",
+        display: "grid",
+        placeItems: "center",
+        background: "#f3f4f6",
+        border: "1px dashed #d1d5db",
+        borderRadius: 8,
+      }}
+    >
+      <span className="text-muted small">Imagen no disponible</span>
+    </div>
+  );
+}
 
 export default function ProjectsCarousel({ items = [] }) {
   const carouselId = `projects-${useId().replace(/:/g, "")}`;
@@ -16,15 +46,9 @@ export default function ProjectsCarousel({ items = [] }) {
             className={`carousel-item ${i === 0 ? "active" : ""}`}
             key={p.id ?? i}
           >
-            {/* 🔹 Imagen responsiva */}
-            <img
-              src={p.img}
-              className="d-block w-100 img-fluid object-fit-cover"
-              style={{ maxHeight: "450px", objectFit: "cover" }}
-              alt={p.title}
-            />
+            {/* Imagen con fallback */}
+            <ImgSafe src={p.img} alt={p.title} />
 
-            {/* 🔹 Texto adaptado según tamaño de pantalla */}
             <div className="carousel-caption text-start bg-dark bg-opacity-50 rounded-3 p-3">
               <h5 className="mb-1 fs-5 fs-md-4">{p.title}</h5>
               <p className="mb-2 d-none d-sm-block">{p.description}</p>
@@ -41,19 +65,18 @@ export default function ProjectsCarousel({ items = [] }) {
                   </a>
                 )}
 
-                {/* 🔹 Botón nuevo que redirige a la ruta definida */}
                 {p.route && (
-                  <button
+                  <a
+                    href={p.route}
                     className="btn btn-sm"
                     style={{
                       background: "linear-gradient(to right, #2a9d8f, #007f5f)",
                       color: "#fff",
                       border: "none",
                     }}
-                    onClick={() => (window.location.href = p.route)}
                   >
                     <i className="bi bi-arrow-right-circle me-1"></i> Más información
-                  </button>
+                  </a>
                 )}
               </div>
             </div>
@@ -61,7 +84,6 @@ export default function ProjectsCarousel({ items = [] }) {
         ))}
       </div>
 
-      {/* 🔹 Botones de control */}
       <button
         className="carousel-control-prev"
         type="button"
@@ -82,7 +104,6 @@ export default function ProjectsCarousel({ items = [] }) {
         <span className="visually-hidden">Siguiente</span>
       </button>
 
-      {/* 🔹 Indicadores */}
       <div className="carousel-indicators">
         {items.map((_, i) => (
           <button
