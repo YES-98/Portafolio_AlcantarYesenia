@@ -1,5 +1,9 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "functions": {
+    "api/**/*.js": { "regions": ["sfo1", "cdg1"] },
+    "api/**/*.ts": { "regions": ["sfo1", "cdg1"] }
+  }
 }
