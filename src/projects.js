@@ -8,6 +8,15 @@ export const projects = [
     link: "https://github.com/YES-98/emonical",
     route: "/Corazon_Mich"
   },
+
+  {
+    id: 4,
+    title: "Corazón Michoacán",
+    img: "https://picsum.photos/seed/emo/1200/350",
+    description: "Chatbot gestor emocional con RA y panel web.",
+    link: "https://github.com/YES-98/emonical",
+    route: "/Corazon_Mich"
+  },
   {
     id: 2,
     title: "Game Center",
