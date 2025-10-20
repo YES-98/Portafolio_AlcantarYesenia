@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;500;700&display=swap');
 
-
 :root {
   --page-pad: 2rem;
   --font-main: 'Poppins', sans-serif;
@@ -8,9 +7,6 @@
   --color-text: #ffffff;
   background-color: #0000001f
 }
-
-/* ===== Importa fuentes llamativas ===== */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;500;700&display=swap');
 
 /* ===== Fondo animado con degradado azul-verde ===== */
 @keyframes gradientPulse {

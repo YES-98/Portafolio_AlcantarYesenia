@@ -20,7 +20,7 @@ export default function ProjectsCarousel({ items = [] }) {
             <img
               src={p.img}
               className="d-block w-100 img-fluid object-fit-cover"
-              style={{ maxHeight: "450px" }} // evita imágenes demasiado grandes
+              style={{ maxHeight: "450px", objectFit: "cover" }}
               alt={p.title}
             />
 
@@ -29,7 +29,7 @@ export default function ProjectsCarousel({ items = [] }) {
               <h5 className="mb-1 fs-5 fs-md-4">{p.title}</h5>
               <p className="mb-2 d-none d-sm-block">{p.description}</p>
 
-              <div className="d-flex flex-wrap gap-2">
+              <div className="d-flex flex-wrap gap-2 justify-content-start">
                 {p.link && (
                   <a
                     href={p.link}
@@ -42,12 +42,19 @@ export default function ProjectsCarousel({ items = [] }) {
                 )}
 
                 {/* 🔹 Botón nuevo que redirige a la ruta definida */}
-                <button
-                  className="btn btn-sm btn-secondary"
-                  onClick={() => (window.location.href = p.route)}
-                >
-                  Más información
-                </button>
+                {p.route && (
+                  <button
+                    className="btn btn-sm"
+                    style={{
+                      background: "linear-gradient(to right, #2a9d8f, #007f5f)",
+                      color: "#fff",
+                      border: "none",
+                    }}
+                    onClick={() => (window.location.href = p.route)}
+                  >
+                    <i className="bi bi-arrow-right-circle me-1"></i> Más información
+                  </button>
+                )}
               </div>
             </div>
           </div>

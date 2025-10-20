@@ -1,0 +1,59 @@
+.ux-title {
+  font-size: 3rem;
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.ux-banner {
+  max-height: 300px;
+  object-fit: cover;
+  border: 2px solid #00ffcc;
+}
+
+.ux-subtitle {
+  font-size: 1.5rem;
+  color: #00ffff;
+  margin-bottom: 1rem;
+}
+
+.ux-meta li {
+  margin-bottom: 0.5rem;
+}
+
+.ux-heading {
+  font-size: 1.25rem;
+  color: #00ffcc;
+  margin-bottom: 0.5rem;
+}
+
+.ux-label {
+  font-weight: bold;
+  color: #39ff14;
+  margin-bottom: 0.5rem;
+}
+
+.ux-section {
+  text-align: justify;
+  line-height: 1.7;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.ux-section:hover {
+  transform: scale(1.01);
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

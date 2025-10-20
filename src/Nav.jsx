@@ -145,13 +145,13 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="mainNavbar" ref={collapseRef}>
           <ul className="navbar-nav ms-auto align-items-start align-items-md-center gap-2">
             <li className="nav-item">
-              <a className="nav-link" href="#habilidades">Habilidades</a>
+              <a className="nav-link" href="./#habilidades">Habilidades</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#proyectos">Proyectos</a>
+              <a className="nav-link" href="./#proyectos">Proyectos</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#herramientas">Herramientas</a>
+              <a className="nav-link" href="./#herramientas">Herramientas</a>
             </li>
           </ul>
         </div>
