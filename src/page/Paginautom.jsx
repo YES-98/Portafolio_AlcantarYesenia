@@ -17,7 +17,7 @@ export default function Paginautom() {
         <p></p>
         <h1 className="title">Página web UTOM</h1>
         <img
-          src="/images/utommm.jpg"
+          src="/images/utom.jpg"
           alt="Banner promocional UTOM"
           className="banner"
         />
