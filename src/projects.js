@@ -11,7 +11,7 @@ export const projects = [
   {
     id: 2,
     title: "Game Center",
-    img: "/images/game.jpg",   // ahora desde public/images
+    img: "https://picsum.photos/seed/emo/1200/350",   // ahora desde public/images
     description:
       "Explora los mejores juegos y torneos donde podrás ganar premios, conocer rivales y demostrar quién es el verdadero campeón.",
     link: "https://github.com/YES-98/GameCenter.git",
