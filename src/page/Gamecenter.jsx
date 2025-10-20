@@ -23,7 +23,7 @@ export default function GameCenter() {
       <header className="mb-5 text-center scroll-reveal">
         <h1 className="ux-title">Game Center</h1>
         <img
-          src="src/assets/Starfield.jpg"
+          src="/images/utom.jpg"
           alt="GameCenter banner"
           className="img-fluid rounded shadow mt-3 ux-banner"
         />
