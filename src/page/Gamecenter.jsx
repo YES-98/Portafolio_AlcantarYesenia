@@ -20,7 +20,7 @@ export default function GameCenter() {
 
   return (
     <div className="container py-5 text-white">
-      <header class="row align-items-center justify-content-center gy-3 gx-md-5 mt-5">
+      <header className="mb-5 text-center scroll-reveal">
         <h1 className="ux-title">Game Center</h1>
         <img
           src="/images/starfield.jpg"
