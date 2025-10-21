@@ -112,7 +112,7 @@ const SkillCircle = ({ name, color, logo, start }) => {
             trailColor: "#d6d6d6",
           })}
         />
-        <img src={logo} alt={name} className="skill-logo" />
+        <img src={logo} alt={name} className="skill-logo-center" />
       </div>
       <h6 className="mt-2">{name}</h6>
     </div>
