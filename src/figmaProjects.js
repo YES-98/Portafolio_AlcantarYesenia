@@ -7,5 +7,13 @@ export const figmaProjects = [
       { nodeId: "0-1", title: "Cover" },
     ],
   },
+   {
+    name: "Armony",
+    fileKey: "6M3JxHd0FcszCJodNHKLcP",
+    fileTitleInUrl: "Armony",
+    frames: [
+      { nodeId: "0-1", title: "Cover" },
+    ],
+  },
   
 ];
