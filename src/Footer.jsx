@@ -11,11 +11,12 @@ const Footer = () => {
               <br />
               Escríbeme y te respondo con gusto.
             </p>
-          <a
+         <a
   href="https://mail.google.com/mail/?view=cm&fs=1&to=yeseniaalcantarrdz@gmail.com&su=Hola%20Yesenia&body=Te%20escribo%20desde%20tu%20portafolio."
   target="_blank"
   class="btn btn-outline-light w-100 w-sm-auto"
 >
+
   <i class="bi bi-envelope me-2"></i> Enviar correo
 </a>
 
@@ -43,8 +44,8 @@ const Footer = () => {
                 <i className="bi bi-github"></i>
               </a>
               <a
-                href="mailto:yesyrdz126@gmail.com"
-                className="text-light fs-4"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=yeseniaalcantarrdz@gmail.com&su=Hola%20Yesenia&body=Te%20escribo%20desde%20tu%20portafolio."
+   className="text-light fs-4"
                 aria-label="Correo"
               >
                 <i className="bi bi-envelope-at"></i>
