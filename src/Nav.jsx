@@ -120,7 +120,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={`navbar navbar-expand-md navbar-dark custom-navbar fixed-top shadow-sm
+      className={`navbar navbar-expand-md navbar-dark custom-navbar shadow-sm
         ${hidden ? "nav-hide" : ""} ${!atTop ? "nav-elevated" : ""}`}
     >
       <div className="container">
