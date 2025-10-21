@@ -9,10 +9,10 @@ const Skills = () => {
     { name: "React", color: "#61DBFB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
     { name: "Node.js", color: "#3C873A", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
     { name: "SQL", color: "#4a6f77ff", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-    { name: "HTML",color: "#e34c26", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    { name: "HTML", color: "#e34c26", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
     { name: "CSS", color: "#264de4", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
     { name: "Bootstrap", color: "#7952b3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
-     ];
+  ];
 
   const personalSkills = [
     {
@@ -37,14 +37,13 @@ const Skills = () => {
     }
   ];
 
-  // Observer de la sección
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
   });
 
   return (
-    <section id="habilidades" ref={ref} className="py-5 ">
+    <section id="habilidades" ref={ref} className="py-5">
       <div className="container">
         <h2 className="h3 fw-bold mb-4 text-center">Habilidades</h2>
 
@@ -82,25 +81,25 @@ const Skills = () => {
   );
 };
 
-const SkillCircle = ({ name, value, color, logo, start }) => {
+const SkillCircle = ({ name, color, logo, start }) => {
   const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
     if (start) {
       let current = 0;
       const interval = setInterval(() => {
-        current += 1;
-        if (current > value) {
-          clearInterval(interval);
-        } else {
+        if (current < 100) {
+          current += 1;
           setPercentage(current);
+        } else {
+          clearInterval(interval);
         }
       }, 15);
       return () => clearInterval(interval);
     } else {
       setPercentage(0);
     }
-  }, [start, value]);
+  }, [start]);
 
   return (
     <div className="col-6 text-center">
@@ -114,7 +113,6 @@ const SkillCircle = ({ name, value, color, logo, start }) => {
           })}
         />
         <img src={logo} alt={name} className="skill-logo" />
-        <span className="skill-percent">{percentage}%</span>
       </div>
       <h6 className="mt-2">{name}</h6>
     </div>
