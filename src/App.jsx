@@ -58,7 +58,7 @@ function App() {
             element={
               <>
                 <section id="sobre-mi" className="py-4">
-                  <div className="row align-items-center justify-content-center gy-3 gx-md-5">
+                  <div class="row align-items-center justify-content-center gy-3 gx-md-5 mt-5">
                     <div className="col-10 col-sm-8 col-md-4 text-center">
                       <img
                         src={lala}
