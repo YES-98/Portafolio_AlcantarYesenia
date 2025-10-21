@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useInView } from "react-intersection-observer";
-import "./skills.css";
+import "./skills.css"; // Asegúrate de que este archivo incluya los estilos que te muestro abajo
 
 const Skills = () => {
   const skillsData = [
@@ -112,7 +112,7 @@ const SkillCircle = ({ name, color, logo, start }) => {
             trailColor: "#d6d6d6",
           })}
         />
-        <img src={logo} alt={name} className="skill-logo-center" />
+        <img src={logo} alt={name} className="skill-logo" />
       </div>
       <h6 className="mt-2">{name}</h6>
     </div>
