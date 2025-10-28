@@ -63,12 +63,12 @@ html {
 }
 
 .avatar-img {
-  width: 180px;
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 8px 24px rgba(0,255,255,0.2);
+  width: 480px;
+  border-radius: 100%;
+  background-color: transparent;
   margin-bottom: 1rem;
 }
+
 
 .hero h1 {
   font-family: var(--font-title);

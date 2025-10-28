@@ -11,7 +11,7 @@ import { projects } from './projects';
 import ToolsFancy from './ToolsFancy';
 import FigmaGallery from './FigmaGallery';
 
-import lala from './assets/photo.png';
+import lala from './assets/AlcantarYes.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
@@ -63,7 +63,8 @@ function App() {
                       <img
                         src={lala}
                         alt="Foto de Yesenia Alcantar"
-                        className="img-thumbnail img-fluid"
+                        className= "img-fluid avatar-img"
+
                       />
                     </div>
                     <div className="col-12 col-md-8 text-center text-md-start">
