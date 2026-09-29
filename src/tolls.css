@@ -1,0 +1,75 @@
+/* Sección con fondo moderno y colorido */
+.tools-section {
+ 
+  position: relative;
+  padding: 5rem 0;
+  border-radius: 1.5rem; /* Bordes redondeados */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Tarjetas con bordes limpios, sombra y hover */
+.tool-card-clear {
+  background-color: rgba(114, 187, 247, 0.918);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(24, 3, 255, 0.44);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px); /* Efecto de vidrio difuso */
+}
+
+.tool-card-clear:hover {
+  transform: translateY(-10px) scale(1.05); /* Efecto de elevación y aumento */
+  box-shadow: 0 6px 20px rgba(124, 3, 133, 0.425);
+}
+
+/* Icono grande dentro de cápsula con transición suave */
+.tool-icon-clear {
+  width: 80px;
+  height: 60px;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tool-icon-clear i {
+  font-size: 2.5rem;
+  color: #dedede;
+  transition: color 0.3s ease;
+}
+
+/* Estilo de texto en las tarjetas */
+.tool-card-clear h6 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.tool-card-clear p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive: ajuste en iconos en pantallas pequeñas */
+@media (max-width: 576px) {
+  .tool-icon-clear {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tool-icon-clear i {
+    font-size: 2rem;
+  }
+
+  .tool-card-clear {
+    padding: 1.5rem;
+  }
+}

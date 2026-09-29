@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+  --page-pad: 2rem;
+  --font-main: 'Poppins', sans-serif;
+  --font-title: 'Bebas Neue', cursive;
+  --color-text: #000000;
+  background-color: #2dd50c
+}
+
+
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  overflow-x: hidden;
+  /*Color fondo*/
+  background-color: #ffffff;
+}
+
+
+/* ===== Navegación ===== */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+html {
+  scroll-behavior: smooth; /* Esto asegura que el desplazamiento sea suave */
+}
+.nav-bar a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-text);
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.avatar-img {
+  width: 480px;
+  border-radius: 100%;
+  background-color: transparent;
+  margin-bottom: 1rem;
+}
+
+
+.hero h1 {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== Botón llamativo ===== */
+.btn-contact {
+  background-color: #2a9d8f;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #007f5f;
+}
+
+/* ===== Secciones ===== */
+section {
+  padding: var(--page-pad);
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Tarjetas ===== */
+.card-hover {
+  background-color: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,255,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--color-text);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,255,255,0.2);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  font-size: 0.9rem;
+}
